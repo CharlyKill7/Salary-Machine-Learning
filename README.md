@@ -51,7 +51,7 @@ Decidimos tratar estos valores uno a uno, procurando dar todo el sentido posible
 <br>
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_2.png" />
 
 <br>
 <br>
@@ -62,11 +62,11 @@ Hasta aquí el proceso de transformación "clásica".
  
 ## Encoding
 
-¿Pase o Carrera? Esa es la gran pregunta a la que se enfrenta un entrenador antes de cada jugada. En pocas palabras, pasar significa lanzar por aire, arriesgando más el balón con vistas a obtener un beneficio mayor en cuanto a yardas. "Carrera", por el contrario, es una forma segura de avanzar desde atrás, aunque las yardas recorridas suelen ser muchas menos. 
+Aunque el enfoque más adecuado sería intentar minimizar el error, probando desde lo más simple a lo más complejo, lo que aquí pretendimos fue probar varios tipos de encoders, sin dejar de mirar, obviamente, la mejor opción en cada caso. Aunque One Hot Encoding suele funcionar bien, decidí utilizarlo sólo para las columnas cuyos valores no tuvieran una relación jerarquica con respecto de la variable objetivo. Éstas fueron remote_ratio y employment_type.
 
-En el siguiente dashboard podemos apreciar, de manera general, lo que voy a ir destripando por secciones.
+<br>
 
-<img src="https://github.com/CharlyKill7/NFL-Success_Visualization/blob/main/images/pass_vs_rush.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/one_hot.png" />
 
 <details>
 <summary>Score & Passing</summary>

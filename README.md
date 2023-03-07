@@ -7,7 +7,7 @@
 1. [Descripción](#descripción)
 2. [Transformación](#transformacion)
 3. [Encoding](#encoding)
-4. [Models](#models)
+4. [Modelos](#modelos)
 5. [Conclusiones](#conclusion)
 
 
@@ -44,7 +44,6 @@ Tras esto, tomamos la precaución de comprobar si había valores en los datos de
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
 
 <br>
-<br>
 
 Decidimos tratar estos valores uno a uno, procurando dar todo el sentido posible a los datos. En el caso de job_title, en 'draft' hicimos unas cuantas pruebas, buscando los puestos más similares en el resto de columnas y asignando el job_title más oportuno en cada caso. Por otro lado, para las otras dos columnas, buscamos en internet los paises más parecidos en cuanto a salarios para el sector IT/Data, y sustituimos en consecuencia por el caso más adecuado de cuantos están en los datos de entrenamiento.
 
@@ -54,9 +53,10 @@ Decidimos tratar estos valores uno a uno, procurando dar todo el sentido posible
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_2.png" />
 
 <br>
-<br>
 
 Hasta aquí el proceso de transformación "clásica".
+
+<br>
 
  <a name="encoding"/>
  
@@ -68,41 +68,28 @@ Aunque el enfoque más adecuado sería intentar minimizar el error, probando des
 
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/one_hot.png" />
 
-<details>
-<summary>Score & Passing</summary>
 <br>
 
- ![pass](https://github.com/CharlyKill7/NFL-Success_Visualization/blob/main/images/pass_scatter.png)
-	
-En este "scatter plot", o mapa de puntos, podemos apreciar que a mayor número de intentos de pase, mayor número de puntos en el marcador. A grandes rasgos, existe una correlación directa entre el número de intentos de pase y los puntos, salvo alguna excepción como Cleveland Browns. 
+Después, decidimos tratar las columnas con pocos valores únicos que pudieran tener una relación jerarquica. Así, work_year, que sigue un orden temporal, company_size, que sigue un orden de tamaños y experience_level, que sigue un orden de experiencia, fueron codificadas con Ordinal Encoder. Como en todos los encodings, vamos haciendo los cambios tanto en train como en test.
 
-</details>
-
-<details>
-<summary>Score & Rushing</summary>
 <br>
 
- ![rush](https://github.com/CharlyKill7/NFL-Success_Visualization/blob/main/images/rush_scatter.png)
-	
-Por contra, en este otro mapa podemos observar que un mayor nº de jugadas de carrera no necesariamente se ve traducido en más puntos. Cabe destacar que, como ya intuimos, New England Patriots es líder en no importa qué tipo de jugada. Hay no obstante otros casos sumamente interesantes, como el de New Orleans Saints. Pasan de estar en el top 2 de intentos de pase a estar por debajo de la media de la liga en carrera, siendo terceros globales en anotación. Esto ya da una pista de por dónde van los tiros.
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/ordinal.png" />
 
-</details>
-
-<details>
-<summary>Top & Bottom Teams Play Distribution</summary>
 <br>
 
-![top](https://github.com/CharlyKill7/NFL-Success_Visualization/blob/main/images/top_pass_rush.png)
-![bot](https://github.com/CharlyKill7/NFL-Success_Visualization/blob/main/images/worst_pass_rush.png)
-	
-En efecto, estas dos tablas resultan esclarecedoras. Teniendo en cuenta sólo los partidos que terminaron en victoria, podemos apreciar que la distribución de jugadas es distinta para los equipos Top y los peores de la liga. Los mejores pasan más, mientras que los peores optan por la carrera como el vehículo principal de su victoria.
+Finalmente, las columnas restantes (job_title, employee_residence y company_location), al tener muchos valores únicos y tener una relación jerárquica en relación al salario, decidimos codificarlas usando Target Encoder, que asigna un código númerico complejo a cada valor en función de su relación con la variable objetivo.
 
-</details>
 <br>
 
-<a name="qb"/>
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/target.png" />
 
-## QB Dependency
+<br>
+<br>
+
+<a name="modelos"/>
+
+## Modelos
 
 De acuerdo, parece más efectivo pasar que correr. Sin embargo, la probabilidad de completar un pase no es la misma en todos los equipos. Sin explayarme, para que un pase tenga éxito, hay varias posiciones del juego involucradas. Un quarterback que lanza, un receptor que corre a atraparla y una serie de guardias que protegen al primero para darle tiempo y que complete el pase. Si existen flaquezas en esos aspectos, es posible que lanzar no sea la mejor de las opciones.
 

@@ -106,7 +106,7 @@ Justo después introdujimos los modelos:
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/models.png" style="width:70%;"/>
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/models.png" style="width:55%;"/>
 
 <br>
 <br>
@@ -115,7 +115,7 @@ Loopeamos por ellos e imprimimos en pantalla los mejores cinco:
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/top_mod.png" style="width:70%;"/>
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/top_mod.png" style="width:60%;"/>
 
 <br>
 <br>
@@ -124,7 +124,7 @@ Para mostrar, finalmente, el RMSE de cada uno de ellos:
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/rmse.png" style="width:70%;"/>
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/rmse.png" style="width:60%;"/>
 
 <br>
 

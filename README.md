@@ -15,41 +15,40 @@
 
 ## Descripción del proyecto
 
-En este proyecto habremos de visualizar los datos cargados tras efectuar una ETL, mediante el uso de herramientas como PowerBI, Tableau o ciertas librerías de Python como Matplotlib o Seaborn, con el fin mejorar el análisis de los mismos. En este caso concreto utilizaremos PowerBI, lo que podrá permitir, a cualquiera que no conozca los datos, entenderlos a golpe de vista.
+Este proyecto es una competición de Kaggle, donde habrá que utilizar Machine Learning para predecir el salario dentro del sector Data, a partir de unos .csv que contienen datos como el puesto, el país de residencia o el tipo de contrato, entre otros. 
 
 ### Restricciones:
-- Utilizar una de las tres herramientas de visualización mencionadas.
-- Practicar <em>storytelling</em>. 
+- No está permitido eliminar filas en los datos de testeo o prueba.
 
 ### Dataset:
-- <em>nfl_football_team_stats</em>: un archivo .csv con todas las estadísticas de juego de los equipos de la NFL entre 2010 y 2016.
+- <em>salaries_data.csv</em>: contiene el conjunto de datos de entrenamiento.
+- <em>testeo.csv</em>: contiene el conjunto de datos de prueba.
+- <em>muestra.csv</em>: ejemplo de formato de la predicción para su carga en Kaggle.
 
 ### Objetivo:
  
-Nuestro objetivo será presentar una serie de figuras gráficas que nos ayuden a dilucidar visualmente una cuestión planteada, que este caso será la siguiente:
-
-<p><strong> ¿Qué factores del juego son más determinantes para el resultado final de un partido en la NFL?</strong>
+Nuestro objetivo será aplicar y mejorar modelos de Machine Learning, probando varias transformaciones, encodings, hiperparámetros y modelos, con el fin de obtener el menos RMSE que sea posible.
 
  
- <a name="wins_by_team"/>
+ <a name="transformacion"/>
  
-## Wins by Team
+## Tranformación
 
-En primer lugar, parece lógico preguntarnos: ¿qué es el éxito en la NFL? La respuesta, para cualquier deporte, sería la misma: la victoria. Por ello, hemos decidido empezar adquiriendo una visión general de los equipos más existosos de la liga, para más adelante analizar las prácticas de cada conjunto en relación a su posición en esta primera gráfica.
+Logicamente, lo primero fue realizar un análisis exploratorio de los datos, comprobando los valores nulos, el tipo de objeto de cada columna, las dimensiones del Dataframe, etc. Este proceso se llevó a cabo en el notebook 'draft', aunque muchas de las pruebas fueron borradas sobre la marcha. También se unificó en una sola columna el salario, quedándonos con salary_in_usd y renombrándola.
 
-<img src="https://github.com/CharlyKill7/NFL-Success_Visualization/blob/main/images/wins.png" />
+Tras esto, tomamos la precaución de comprobar si había valores en los datos de prueba que no estuvieran en el entrenamiento. Descubrimos así tres columnas con valores distintos: employee_residence, company_location y job_title.
 
-Como podemos ver, para el periodo analizado hay un equipo sinónimo de éxito: New England Patriots. Es posible que, de analizar únicamente sus estadísticas, no podamos precisar qué aspecto del juego se debe priorizar, puesto que en la mayoría resultarían punteros. Por eso, vamos a dividir en tres los 32 equipos del gráfico. 
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
 
-- Los Top Teams, los diez primeros, de New England Patriots a Kansas City Chiefs.
-- Los Mid Teams, los doce intermedios, de Cincinnati Bengals a Los Angeles/San Diego Chargers.
-- Los Worst Teams, los diez últimos, de Miami Dolphins a Cleveland Browns.
+Decidimos tratar estos valores uno a uno, procurando dar todo el sentido posible a los datos. En el caso de job_title, en 'draft' hicimos unas cuantas pruebas, buscando los puestos más similares en el resto de columnas y asignando el job_title más oportuno en cada caso. Por otro lado, para las otras dos columnas, buscamos en internet los paises más parecidos en cuanto a salarios para el sector IT/Data, y sustituimos en consecuencia por el caso más adecuado de cuantos están en los datos de entrenamiento.
 
-En este análisis vamos a utilizar el primer grupo y el último, buscando diferencias significativas en sus patrones de juego.
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
 
- <a name="pass_rush"/>
+Hasta aquí el proceso de transformación "clásica".
+
+ <a name="encoding"/>
  
-## Passing vs Rushing
+## Encoding
 
 ¿Pase o Carrera? Esa es la gran pregunta a la que se enfrenta un entrenador antes de cada jugada. En pocas palabras, pasar significa lanzar por aire, arriesgando más el balón con vistas a obtener un beneficio mayor en cuanto a yardas. "Carrera", por el contrario, es una forma segura de avanzar desde atrás, aunque las yardas recorridas suelen ser muchas menos. 
 

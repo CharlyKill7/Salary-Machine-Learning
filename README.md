@@ -1,7 +1,5 @@
 # W7 Project - Salary: Machine Learning
 
-# W5 Project - NFL Success Visualization
-
 ![portada](https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/money.png)
 
 ## Índice

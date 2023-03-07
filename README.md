@@ -100,6 +100,7 @@ Una vez transformadas en numéricas todas las columnas, iniciamos el proceso de 
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/params.png" />
 
 <br>
+<br>
 	
 Justo después introdujimos los modelos:
 
@@ -107,6 +108,7 @@ Justo después introdujimos los modelos:
 
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/models.png" />
 
+<br>
 <br>
 
 Loopeamos por ellos e imprimimos en pantalla los mejores cinco:

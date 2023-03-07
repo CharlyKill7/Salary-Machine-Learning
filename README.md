@@ -50,7 +50,7 @@ Decidimos tratar estos valores uno a uno, procurando dar todo el sentido posible
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_2.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_2.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -68,7 +68,7 @@ Aunque el enfoque más adecuado sería intentar minimizar el error, probando des
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/one_hot.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/one_hot.png" style="width:70%;"/>
 
 <br>
 
@@ -76,7 +76,7 @@ Después, decidimos tratar las columnas con pocos valores únicos que pudieran t
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/ordinal.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/ordinal.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -84,7 +84,7 @@ Finalmente, las columnas restantes (job_title, employee_residence y company_loca
 
 <br>
 <br>
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/target.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/target.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -97,7 +97,7 @@ Una vez transformadas en numéricas todas las columnas, iniciamos el proceso de 
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/params.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/params.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -106,7 +106,7 @@ Justo después introdujimos los modelos:
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/models.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/models.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -115,7 +115,7 @@ Loopeamos por ellos e imprimimos en pantalla los mejores cinco:
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/top_mod.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/top_mod.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -124,7 +124,7 @@ Para mostrar, finalmente, el RMSE de cada uno de ellos:
 
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/rmse.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/rmse.png" style="width:70%;"/>
 
 <br>
 

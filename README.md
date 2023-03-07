@@ -41,7 +41,7 @@ Tras esto, tomamos la precaución de comprobar si había valores en los datos de
 <br>
 <br>
 
-<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
+<img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" style="width:70%;"/>
 
 <br>
 <br>
@@ -117,6 +117,7 @@ Loopeamos por ellos e imprimimos en pantalla los mejores cinco:
 
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/top_mod.png" />
 
+<br>
 <br>
 	
 Para mostrar, finalmente, el RMSE de cada uno de ellos:

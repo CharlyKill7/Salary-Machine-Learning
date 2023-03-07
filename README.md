@@ -83,7 +83,7 @@ Después, decidimos tratar las columnas con pocos valores únicos que pudieran t
 Finalmente, las columnas restantes (job_title, employee_residence y company_location), al tener muchos valores únicos y tener una relación jerárquica en relación al salario, decidimos codificarlas usando Target Encoder, que asigna un código númerico complejo a cada valor en función de su relación con la variable objetivo.
 
 <br>
-
+<br>
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/target.png" />
 
 <br>

@@ -38,11 +38,23 @@ Logicamente, lo primero fue realizar un análisis exploratorio de los datos, com
 
 Tras esto, tomamos la precaución de comprobar si había valores en los datos de prueba que no estuvieran en el entrenamiento. Descubrimos así tres columnas con valores distintos: employee_residence, company_location y job_title.
 
+<br>
+<br>
+
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
+
+<br>
+<br>
 
 Decidimos tratar estos valores uno a uno, procurando dar todo el sentido posible a los datos. En el caso de job_title, en 'draft' hicimos unas cuantas pruebas, buscando los puestos más similares en el resto de columnas y asignando el job_title más oportuno en cada caso. Por otro lado, para las otras dos columnas, buscamos en internet los paises más parecidos en cuanto a salarios para el sector IT/Data, y sustituimos en consecuencia por el caso más adecuado de cuantos están en los datos de entrenamiento.
 
+<br>
+<br>
+
 <img src="https://github.com/CharlyKill7/Salary-Machine-Learning/blob/main/img/tra_1.png" />
+
+<br>
+<br>
 
 Hasta aquí el proceso de transformación "clásica".
 
